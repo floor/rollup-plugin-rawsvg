@@ -5,7 +5,7 @@ export default function svg (options = {}) {
   const filter = createFilter(options.include, options.exclude)
 
   return {
-    name: 'svg',
+    name: 'rawsvg',
 
     transform (code, id) {
       if (!filter(id) || extname(id) !== '.svg') {
