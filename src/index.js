@@ -2,13 +2,11 @@ import { extname } from 'path'
 import { createFilter } from 'rollup-pluginutils'
 
 export default function svg (options = {}) {
-  const filter = createFilter(options.include, options.exclude)
-
   return {
     name: 'rawsvg',
 
     transform (code, id) {
-      if (!filter(id) || extname(id) !== '.svg') {
+      if (extname(id) !== '.svg') {
         return null
       }
 
