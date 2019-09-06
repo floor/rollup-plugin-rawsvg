@@ -3,13 +3,13 @@
 var path = require('path')
 var rollupPluginutils = require('rollup-pluginutils')
 
-function svg (options) {
+function rawsvg (options) {
   if (options === void 0) options = {}
 
   var filter = rollupPluginutils.createFilter(options.include, options.exclude)
 
   return {
-    name: 'svg',
+    name: 'rawsvg',
 
     transform: function transform (code, id) {
       if (!filter(id) || path.extname(id) !== '.svg') {
@@ -22,4 +22,4 @@ function svg (options) {
   }
 }
 
-module.exports = svg
+module.exports = rawsvg
