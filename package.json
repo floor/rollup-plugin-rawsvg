@@ -1,4 +1,5 @@
 {
+  "version": "1.0.2",
   "bugs": {
     "url": "https://github.com/floor/rollup-plugin-rawsvg/issues"
   },
@@ -40,6 +41,5 @@
     "build:es": "rollup -c -o dist/rollup-plugin-rawsvg.es.js -f es6",
     "prepublish": "npm run build",
     "pretest": "npm run build:cjs"
-  },
-  "version": "1.0.1"
+  }
 }
